@@ -1,1 +1,0 @@
-# carevive-cypress-automation
