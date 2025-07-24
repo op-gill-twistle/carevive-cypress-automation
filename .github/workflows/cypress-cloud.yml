@@ -12,6 +12,8 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps:
+      - name: Clean Cypress cache
+        run: rm -rf /home/runner/.cache/Cypress
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Setup Node.js
@@ -20,6 +22,10 @@ jobs:
           node-version: 20
       - name: Install dependencies
         run: npm install
+      - name: Install Cypress binary
+        run: npx cypress install
+      - name: Verify Cypress binary
+        run: ls -l /home/runner/.cache/Cypress/14.5.2/Cypress || echo "Cypress binary not found"
       - name: Set up Cypress Cloud environment variables
         run: |
           echo '{"USERNAME": "${{ secrets.CYPRESS_USERNAME }}", "PASSWORD": "${{ secrets.CYPRESS_PASSWORD }}"}' > cypress.env.json
