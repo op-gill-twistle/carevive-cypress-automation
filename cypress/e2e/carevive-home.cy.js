@@ -5,6 +5,14 @@ beforeEach(() => {
     cy.get(selectors.usernameInput).should('be.visible').type(Cypress.env('USERNAME'))
     cy.get(selectors.passwordInput).should('be.visible').type(Cypress.env('PASSWORD'))
     cy.get(selectors.loginButton).click()
+    // Log the current URL after login
+    cy.url().then(url => {
+      cy.log('Current URL after login:', url)
+    })
+    // Log page content after login for debugging
+    cy.document().then(doc => {
+      cy.log('Page content after login:', doc.documentElement.innerHTML.substring(0, 1000))
+    })
   })
 });
 
