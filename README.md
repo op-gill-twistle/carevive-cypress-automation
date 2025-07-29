@@ -45,7 +45,7 @@ cypress.env.json             # Secure credentials (not committed)
    npx cypress run
    ```
 4. To run and record tests on Cypress Cloud:
-   - Ensure you have a Cypress Cloud account and your project is set up at https://cloud.cypress.io/
+   - Ensure you have a Cypress Cloud account and your project is set up at: https://cloud.cypress.io/
    - Get your project record key from the Cypress Cloud dashboard.
    - Add the record key to your `cypress.config.js` or use the CLI argument as shown below.
    - Run the following command:

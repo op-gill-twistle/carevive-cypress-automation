@@ -1,4 +1,4 @@
-let selectors;
+ let selectors;
 before(() => {
   cy.fixture('selectors').then((data) => {
     selectors = data;

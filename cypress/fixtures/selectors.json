@@ -3,5 +3,7 @@
   "passwordInput": "input[type='password'], input[name='password'], input#password",
   "loginButton": "button[type='submit']",
   "cancerCenterText": "CV Cancer Center",
-  "logoImage": ".logoImage"
+  "logoImage": ".logoImage",
+  "firstNameInput": ".form-control.oneormore",
+  "btnRegisterNewPatient": "#btnRegisterNewPatient"
 }
